@@ -1,0 +1,485 @@
+src/crt/crt.c:36:46: error: Subtracting pointers that point to different objects [comparePointers]
+ size_t count = (size_t)(__preinit_array_end - __preinit_array_start);
+                                             ^
+src/crt/crt.c:19:15: note: Variable declared here.
+extern void (*__preinit_array_end[])(void) __attribute__((weak));
+              ^
+src/crt/crt.c:36:26: note: Array decayed to pointer here.
+ size_t count = (size_t)(__preinit_array_end - __preinit_array_start);
+                         ^
+src/crt/crt.c:18:15: note: Variable declared here.
+extern void (*__preinit_array_start[])(void) __attribute__((weak));
+              ^
+src/crt/crt.c:36:48: note: Array decayed to pointer here.
+ size_t count = (size_t)(__preinit_array_end - __preinit_array_start);
+                                               ^
+src/crt/crt.c:36:46: note: Subtracting pointers that point to different objects
+ size_t count = (size_t)(__preinit_array_end - __preinit_array_start);
+                                             ^
+src/crt/crt.c:42:36: error: Subtracting pointers that point to different objects [comparePointers]
+ count = (size_t)(__init_array_end - __init_array_start);
+                                   ^
+src/crt/crt.c:21:15: note: Variable declared here.
+extern void (*__init_array_end[])(void) __attribute__((weak));
+              ^
+src/crt/crt.c:42:19: note: Array decayed to pointer here.
+ count = (size_t)(__init_array_end - __init_array_start);
+                  ^
+src/crt/crt.c:20:15: note: Variable declared here.
+extern void (*__init_array_start[])(void) __attribute__((weak));
+              ^
+src/crt/crt.c:42:38: note: Array decayed to pointer here.
+ count = (size_t)(__init_array_end - __init_array_start);
+                                     ^
+src/crt/crt.c:42:36: note: Subtracting pointers that point to different objects
+ count = (size_t)(__init_array_end - __init_array_start);
+                                   ^
+src/crt/crt.c:51:43: error: Subtracting pointers that point to different objects [comparePointers]
+ size_t count = (size_t)(__fini_array_end - __fini_array_start);
+                                          ^
+src/crt/crt.c:23:15: note: Variable declared here.
+extern void (*__fini_array_end[])(void) __attribute__((weak));
+              ^
+src/crt/crt.c:51:26: note: Array decayed to pointer here.
+ size_t count = (size_t)(__fini_array_end - __fini_array_start);
+                         ^
+src/crt/crt.c:22:15: note: Variable declared here.
+extern void (*__fini_array_start[])(void) __attribute__((weak));
+              ^
+src/crt/crt.c:51:45: note: Array decayed to pointer here.
+ size_t count = (size_t)(__fini_array_end - __fini_array_start);
+                                            ^
+src/crt/crt.c:51:43: note: Subtracting pointers that point to different objects
+ size_t count = (size_t)(__fini_array_end - __fini_array_start);
+                                          ^
+src/crt/crtbegin.c:35:9: style: struct member 'Anonymous0::p' is never used. [unusedStructMember]
+  void* p[8];
+        ^
+src/stdlib/bsearch.c:54:6: style: The scope of the variable 'cmp' can be reduced. [variableScope]
+ int cmp;
+     ^
+src/stdlib/bsearch.c:55:14: style: The scope of the variable 'p' can be reduced. [variableScope]
+ const void* p;
+             ^
+src/stdlib/heapsort.c:149:8: style: The scope of the variable 'tmp1' can be reduced. [variableScope]
+ char* tmp1;
+       ^
+src/stdlib/heapsort.c:150:8: style: The scope of the variable 'tmp2' can be reduced. [variableScope]
+ char* tmp2;
+       ^
+src/stdlib/heapsort_r.c:150:8: style: The scope of the variable 'tmp1' can be reduced. [variableScope]
+ char* tmp1;
+       ^
+src/stdlib/heapsort_r.c:151:8: style: The scope of the variable 'tmp2' can be reduced. [variableScope]
+ char* tmp2;
+       ^
+src/string/strtok.c:125:9: style: Variable 'phrase' is assigned a value that is never used. [unreadVariable]
+ phrase = "foo";
+        ^
+test/ctype/isalnum.c:56:27: error: Invalid isalnum() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalnum(1024), 0);
+                          ^
+test/ctype/isalnum.c:57:27: error: Invalid isalnum() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalnum(15185), 0);
+                          ^
+test/ctype/isalnum.c:58:27: error: Invalid isalnum() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalnum(1808303), 0);
+                          ^
+test/ctype/isalnum.c:60:28: error: Invalid isalnum() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalnum(-1), 0);
+                           ^
+test/ctype/isalnum.c:61:28: error: Invalid isalnum() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalnum(-100), 0);
+                           ^
+test/ctype/isalpha.c:46:27: error: Invalid isalpha() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalpha(1024), 0);
+                          ^
+test/ctype/isalpha.c:47:27: error: Invalid isalpha() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalpha(15185), 0);
+                          ^
+test/ctype/isalpha.c:48:27: error: Invalid isalpha() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalpha(1808303), 0);
+                          ^
+test/ctype/isalpha.c:50:28: error: Invalid isalpha() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalpha(-1), 0);
+                           ^
+test/ctype/isalpha.c:51:28: error: Invalid isalpha() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isalpha(-100), 0);
+                           ^
+test/ctype/isblank.c:45:27: error: Invalid isblank() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isblank(1024), 0);
+                          ^
+test/ctype/isblank.c:46:27: error: Invalid isblank() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isblank(15185), 0);
+                          ^
+test/ctype/isblank.c:47:27: error: Invalid isblank() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isblank(1808303), 0);
+                          ^
+test/ctype/isblank.c:49:28: error: Invalid isblank() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isblank(-1), 0);
+                           ^
+test/ctype/isblank.c:50:28: error: Invalid isblank() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isblank(-100), 0);
+                           ^
+test/ctype/iscntrl.c:37:27: error: Invalid iscntrl() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(iscntrl(1024), 0);
+                          ^
+test/ctype/iscntrl.c:38:27: error: Invalid iscntrl() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(iscntrl(15185), 0);
+                          ^
+test/ctype/iscntrl.c:39:27: error: Invalid iscntrl() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(iscntrl(1808303), 0);
+                          ^
+test/ctype/iscntrl.c:41:28: error: Invalid iscntrl() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(iscntrl(-1), 0);
+                           ^
+test/ctype/iscntrl.c:42:28: error: Invalid iscntrl() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(iscntrl(-100), 0);
+                           ^
+test/ctype/isdigit.c:41:27: error: Invalid isdigit() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isdigit(1024), 0);
+                          ^
+test/ctype/isdigit.c:42:27: error: Invalid isdigit() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isdigit(15185), 0);
+                          ^
+test/ctype/isdigit.c:43:27: error: Invalid isdigit() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isdigit(1808303), 0);
+                          ^
+test/ctype/isdigit.c:45:28: error: Invalid isdigit() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isdigit(-1), 0);
+                           ^
+test/ctype/isdigit.c:46:28: error: Invalid isdigit() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isdigit(-100), 0);
+                           ^
+test/ctype/isgraph.c:36:27: error: Invalid isgraph() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isgraph(1024), 0);
+                          ^
+test/ctype/isgraph.c:37:27: error: Invalid isgraph() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isgraph(15185), 0);
+                          ^
+test/ctype/isgraph.c:38:27: error: Invalid isgraph() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isgraph(1808303), 0);
+                          ^
+test/ctype/isgraph.c:40:28: error: Invalid isgraph() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isgraph(-1), 0);
+                           ^
+test/ctype/isgraph.c:41:28: error: Invalid isgraph() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isgraph(-100), 0);
+                           ^
+test/ctype/islower.c:41:27: error: Invalid islower() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(islower(1024), 0);
+                          ^
+test/ctype/islower.c:42:27: error: Invalid islower() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(islower(15185), 0);
+                          ^
+test/ctype/islower.c:43:27: error: Invalid islower() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(islower(1808303), 0);
+                          ^
+test/ctype/islower.c:45:28: error: Invalid islower() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(islower(-1), 0);
+                           ^
+test/ctype/islower.c:46:28: error: Invalid islower() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(islower(-100), 0);
+                           ^
+test/ctype/isprint.c:38:27: error: Invalid isprint() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isprint(1024), 0);
+                          ^
+test/ctype/isprint.c:39:27: error: Invalid isprint() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isprint(15185), 0);
+                          ^
+test/ctype/isprint.c:40:27: error: Invalid isprint() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isprint(1808303), 0);
+                          ^
+test/ctype/isprint.c:42:28: error: Invalid isprint() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isprint(-1), 0);
+                           ^
+test/ctype/isprint.c:43:28: error: Invalid isprint() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isprint(-100), 0);
+                           ^
+test/ctype/ispunct.c:67:27: error: Invalid ispunct() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(ispunct(1024), 0);
+                          ^
+test/ctype/ispunct.c:68:27: error: Invalid ispunct() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(ispunct(15185), 0);
+                          ^
+test/ctype/ispunct.c:69:27: error: Invalid ispunct() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(ispunct(1808303), 0);
+                          ^
+test/ctype/ispunct.c:71:28: error: Invalid ispunct() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(ispunct(-1), 0);
+                           ^
+test/ctype/ispunct.c:72:28: error: Invalid ispunct() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(ispunct(-100), 0);
+                           ^
+test/ctype/isspace.c:49:27: error: Invalid isspace() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isspace(1024), 0);
+                          ^
+test/ctype/isspace.c:50:27: error: Invalid isspace() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isspace(15185), 0);
+                          ^
+test/ctype/isspace.c:51:27: error: Invalid isspace() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isspace(1808303), 0);
+                          ^
+test/ctype/isspace.c:53:28: error: Invalid isspace() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isspace(-1), 0);
+                           ^
+test/ctype/isspace.c:54:28: error: Invalid isspace() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isspace(-100), 0);
+                           ^
+test/ctype/isupper.c:41:27: error: Invalid isupper() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isupper(1024), 0);
+                          ^
+test/ctype/isupper.c:42:27: error: Invalid isupper() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isupper(15185), 0);
+                          ^
+test/ctype/isupper.c:43:27: error: Invalid isupper() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isupper(1808303), 0);
+                          ^
+test/ctype/isupper.c:45:28: error: Invalid isupper() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isupper(-1), 0);
+                           ^
+test/ctype/isupper.c:46:28: error: Invalid isupper() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isupper(-100), 0);
+                           ^
+test/ctype/isxdigit.c:61:28: error: Invalid isxdigit() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isxdigit(1024), 0);
+                           ^
+test/ctype/isxdigit.c:62:28: error: Invalid isxdigit() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isxdigit(15185), 0);
+                           ^
+test/ctype/isxdigit.c:63:28: error: Invalid isxdigit() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isxdigit(1808303), 0);
+                           ^
+test/ctype/isxdigit.c:65:29: error: Invalid isxdigit() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isxdigit(-1), 0);
+                            ^
+test/ctype/isxdigit.c:66:29: error: Invalid isxdigit() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(isxdigit(-100), 0);
+                            ^
+test/ctype/tolower.c:39:27: error: Invalid tolower() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(tolower(1024), 1024);
+                          ^
+test/ctype/tolower.c:40:27: error: Invalid tolower() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(tolower(15185), 15185);
+                          ^
+test/ctype/tolower.c:41:27: error: Invalid tolower() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(tolower(1808303), 1808303);
+                          ^
+test/ctype/tolower.c:43:28: error: Invalid tolower() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(tolower(-1), -1);
+                           ^
+test/ctype/tolower.c:44:28: error: Invalid tolower() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(tolower(-100), -100);
+                           ^
+test/ctype/toupper.c:39:27: error: Invalid toupper() argument nr 1. The value is 1024 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(toupper(1024), 1024);
+                          ^
+test/ctype/toupper.c:40:27: error: Invalid toupper() argument nr 1. The value is 15185 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(toupper(15185), 15185);
+                          ^
+test/ctype/toupper.c:41:27: error: Invalid toupper() argument nr 1. The value is 1808303 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(toupper(1808303), 1808303);
+                          ^
+test/ctype/toupper.c:43:28: error: Invalid toupper() argument nr 1. The value is -1 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(toupper(-1), -1);
+                           ^
+test/ctype/toupper.c:44:28: error: Invalid toupper() argument nr 1. The value is -100 but the valid values are '0:255'. [invalidFunctionArg]
+ assert_int_equal(toupper(-100), -100);
+                           ^
+test/stdlib/atof.c:93:9: style: The scope of the variable 'x' can be reduced. [variableScope]
+ double x;
+        ^
+test/stdlib/div.c:135:6: style: The scope of the variable 'x' can be reduced. [variableScope]
+ int x, y, div, mod;
+     ^
+test/stdlib/div.c:135:9: style: The scope of the variable 'y' can be reduced. [variableScope]
+ int x, y, div, mod;
+        ^
+test/stdlib/div.c:135:12: style: The scope of the variable 'div' can be reduced. [variableScope]
+ int x, y, div, mod;
+           ^
+test/stdlib/div.c:135:17: style: The scope of the variable 'mod' can be reduced. [variableScope]
+ int x, y, div, mod;
+                ^
+test/stdlib/imaxdiv.c:191:11: style: The scope of the variable 'x' can be reduced. [variableScope]
+ intmax_t x, y, div, mod;
+          ^
+test/stdlib/imaxdiv.c:191:14: style: The scope of the variable 'y' can be reduced. [variableScope]
+ intmax_t x, y, div, mod;
+             ^
+test/stdlib/imaxdiv.c:191:17: style: The scope of the variable 'div' can be reduced. [variableScope]
+ intmax_t x, y, div, mod;
+                ^
+test/stdlib/imaxdiv.c:191:22: style: The scope of the variable 'mod' can be reduced. [variableScope]
+ intmax_t x, y, div, mod;
+                     ^
+test/stdlib/ldiv.c:133:7: style: The scope of the variable 'x' can be reduced. [variableScope]
+ long x, y, div, mod;
+      ^
+test/stdlib/ldiv.c:133:10: style: The scope of the variable 'y' can be reduced. [variableScope]
+ long x, y, div, mod;
+         ^
+test/stdlib/ldiv.c:133:13: style: The scope of the variable 'div' can be reduced. [variableScope]
+ long x, y, div, mod;
+            ^
+test/stdlib/ldiv.c:133:18: style: The scope of the variable 'mod' can be reduced. [variableScope]
+ long x, y, div, mod;
+                 ^
+test/stdlib/lldiv.c:151:11: style: The scope of the variable 'x' can be reduced. [variableScope]
+ uint64_t x, y, div, mod;
+          ^
+test/stdlib/lldiv.c:151:14: style: The scope of the variable 'y' can be reduced. [variableScope]
+ uint64_t x, y, div, mod;
+             ^
+test/stdlib/lldiv.c:151:17: style: The scope of the variable 'div' can be reduced. [variableScope]
+ uint64_t x, y, div, mod;
+                ^
+test/stdlib/lldiv.c:151:22: style: The scope of the variable 'mod' can be reduced. [variableScope]
+ uint64_t x, y, div, mod;
+                     ^
+test/stdlib/realloc.c:27:2: error: Common realloc mistake: 'p' nulled but not freed upon failure [memleakOnRealloc]
+ p = realloc(p, CALLOC_TEST_SIZE * 2);
+ ^
+test/stdlib/realloc.c:40:2: error: Common realloc mistake: 'p' nulled but not freed upon failure [memleakOnRealloc]
+ p = realloc(p, CALLOC_TEST_SIZE / 2);
+ ^
+test/stdlib/strtod.c:94:9: style: The scope of the variable 'x' can be reduced. [variableScope]
+ double x;
+        ^
+test/stdlib/strtof.c:58:8: style: The scope of the variable 'x' can be reduced. [variableScope]
+ float x;
+       ^
+test/stdlib/strtol.c:64:41: error: Invalid strtol() argument nr 3. The value is 37 but the valid values are '0,2:36'. [invalidFunctionArg]
+ assert_int_equal(strtol(s = "123", &c, 37), 0);
+                                        ^
+test/stdlib/strtoll.c:48:42: error: Invalid strtoll() argument nr 3. The value is 37 but the valid values are '0,2:36'. [invalidFunctionArg]
+ assert_int_equal(strtoll(s = "123", &c, 37), 0);
+                                         ^
+test/stdlib/strtoull.c:21:14: style: The scope of the variable 's' can be reduced. [variableScope]
+ const char* s;
+             ^
+test/string/memcmp.c:33:37: error: Null pointer dereference [nullPointer]
+ assert_int_not_equal(memcmp("abc", NULL, 3), 0);
+                                    ^
+test/string/memcmp.c:34:30: error: Null pointer dereference [nullPointer]
+ assert_int_not_equal(memcmp(NULL, "abc", 3), 0);
+                             ^
+test/string/memcmp.c:38:26: error: Null pointer dereference [nullPointer]
+ assert_int_equal(memcmp(NULL, NULL, 0), 0);
+                         ^
+test/string/memcmp.c:21:19: warning: Unnecessary comparison of static strings. [staticStringCompare]
+ assert_int_equal(memcmp("abc", "abc", 4), 0);
+                  ^
+test/string/memcmp.c:38:19: warning: Comparison of identical string variables. [stringCompare]
+ assert_int_equal(memcmp(NULL, NULL, 0), 0);
+                  ^
+test/string/strcmp.c:24:37: error: Null pointer dereference [nullPointer]
+ assert_int_not_equal(strcmp("abc", NULL), 0);
+                                    ^
+test/string/strcmp.c:25:30: error: Null pointer dereference [nullPointer]
+ assert_int_not_equal(strcmp(NULL, "abc"), 0);
+                             ^
+test/string/strcmp.c:28:26: error: Null pointer dereference [nullPointer]
+ assert_int_equal(strcmp(NULL, NULL), 0);
+                         ^
+test/string/strcmp.c:21:19: warning: Unnecessary comparison of static strings. [staticStringCompare]
+ assert_int_equal(strcmp("abc", "abc"), 0);
+                  ^
+test/string/strcmp.c:28:19: warning: Comparison of identical string variables. [stringCompare]
+ assert_int_equal(strcmp(NULL, NULL), 0);
+                  ^
+test/string/strncmp.c:20:19: warning: Unnecessary comparison of static strings. [staticStringCompare]
+ assert_int_equal(strncmp("abcd", "abce", 3), 0);
+                  ^
+test/string/strncmp.c:23:21: warning: Unnecessary comparison of static strings. [staticStringCompare]
+ assert_int_equal(!!strncmp("abc", "abd", 3), 1);
+                    ^
+arch/aarch64/src/__aeabi_atexit.c:5:0: style: The function '__aeabi_atexit' is never used. [unusedFunction]
+
+^
+src/assert/assert.c:5:0: style: The function '__assert_fail' is never used. [unusedFunction]
+
+^
+src/crt/stack_protection.c:43:0: style: The function '__stack_chk_fail' is never used. [unusedFunction]
+
+^
+src/time/asctime.c:6:0: style: The function 'asctime' is never used. [unusedFunction]
+
+^
+src/stdio/asprintf.c:9:0: style: The function 'asprintf' is never used. [unusedFunction]
+
+^
+src/crt/at_quick_exit.c:3:0: style: The function 'at_quick_exit' is never used. [unusedFunction]
+
+^
+src/crt/at_exit.c:3:0: style: The function 'atexit' is never used. [unusedFunction]
+
+^
+src/crt/exit.c:3:0: style: The function 'exit' is never used. [unusedFunction]
+
+^
+src/support/flsll.c:66:0: style: The function 'flsll' is never used. [unusedFunction]
+
+^
+src/stdlib/imaxdiv.c:30:0: style: The function 'imaxdiv' is never used. [unusedFunction]
+
+^
+src/wchar/iswctype.c:4:0: style: The function 'iswctype' is never used. [unusedFunction]
+
+^
+src/stdlib/ldiv.c:35:0: style: The function 'ldiv' is never used. [unusedFunction]
+
+^
+src/stdlib/lldiv.c:30:0: style: The function 'lldiv' is never used. [unusedFunction]
+
+^
+src/stdio/puts.c:3:0: style: The function 'puts' is never used. [unusedFunction]
+
+^
+src/crt/quick_exit.c:3:0: style: The function 'quick_exit' is never used. [unusedFunction]
+
+^
+src/stdlib/realloc.c:26:0: style: The function 'reallocf' is never used. [unusedFunction]
+
+^
+src/string/strcoll.c:3:0: style: The function 'strcoll' is never used. [unusedFunction]
+
+^
+src/string/strerror_r.c:5:0: style: The function 'strerror_r' is never used. [unusedFunction]
+
+^
+src/string/strpbrk.c:3:0: style: The function 'strpbrk' is never used. [unusedFunction]
+
+^
+src/string/strspn.c:7:0: style: The function 'strspn' is never used. [unusedFunction]
+
+^
+src/stdlib/strtold.c:4:0: style: The function 'strtold' is never used. [unusedFunction]
+
+^
+src/string/strxfrm.c:3:0: style: The function 'strxfrm' is never used. [unusedFunction]
+
+^
+test/test/rand.c:127:0: style: The function 't_choose' is never used. [unusedFunction]
+
+^
+test/test/rand.c:58:0: style: The function 'test_randint' is never used. [unusedFunction]
+
+^
+test/test/rand.c:96:0: style: The function 'test_randrange' is never used. [unusedFunction]
+
+^
+src/wchar/towctrans.c:4:0: style: The function 'towctrans' is never used. [unusedFunction]
+
+^
+src/wchar/wcswidth.c:3:0: style: The function 'wcswidth' is never used. [unusedFunction]
+
+^
+src/wchar/wctrans.c:4:0: style: The function 'wctrans' is never used. [unusedFunction]
+
+^
+src/wchar/wctype.c:4:0: style: The function 'wctype' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
